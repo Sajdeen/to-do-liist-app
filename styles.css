@@ -3,3 +3,63 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container{
+    margin: auto;
+    margin-top: 50px;
+    height: 150px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    justify-content: center;
+    
+}
+h1{
+   background:url("n.webp");
+   background-size: cover;
+   -webkit-background-clip: text;
+ -webkit-text-fill-color:transparent;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;s
+}
+.input-container{
+    border: 2px solid black;
+    height: 50px;
+    border-radius:100px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+#taskInput{
+    height: 20px;
+}
+button{
+    background-color: darkgreen;
+    height: 20px;
+    color: antiquewhite;
+    border: none;
+    cursor: pointer;
+}
+ #addTask{
+height: 50px;
+width: 80px;
+font-size: 20px;
+color: antiquewhite;
+border-radius: 10px;
+margin-left: 10px;
+ }
+
+#taskInput {
+    flex-grow: 1;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 50px;
+}
