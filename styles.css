@@ -18,12 +18,12 @@ h1{
    background:url("n.webp");
    background-size: cover;
    -webkit-background-clip: text;
- -webkit-text-fill-color:transparent;
+  -webkit-text-fill-color:transparent;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 10px;s
+    margin-bottom: 10px;
 }
 .input-container{
     border: 2px solid black;
@@ -62,4 +62,24 @@ margin-left: 10px;
     padding-left: 10px;
     font-size: 16px;
     border-radius: 50px;
+}
+ul{
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+li{
+cursor: pointer;
+margin-block-end: 12px;
+border-radius:20px;
+background-color:blue;
+padding: 6px 12px;
+color: azure;
+}
+#task-list{
+
+height: 20;
 }
