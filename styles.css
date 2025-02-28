@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+}        
+
 .container{
-    margin: auto;
+ margin: auto;
     margin-top: 50px;
     height: 150px;
     width: 300px;
@@ -12,7 +13,7 @@
     flex-direction: column;
    align-items: center;
     justify-content: center;
-    
+   
 }
 h1{
    background:url("n.webp");
@@ -37,6 +38,8 @@ h1{
 
 #taskInput{
     height: 20px;
+
+   
 }
 button{
     background-color: darkgreen;
@@ -63,23 +66,35 @@ margin-left: 10px;
     font-size: 16px;
     border-radius: 50px;
 }
+
+#task-list {
+    height: 100px;
+    width: 100%;
+    max-width: 250px;
+    border: 2px solid black; 
+    border-radius: 10px; 
+    padding: 10px; 
+    margin-top: 20px; 
+    background-color: white; 
+}
 ul{
     width: 100%;
-    max-width: 450px;
+    max-width: 20rem;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-li{
-cursor: pointer;
-margin-block-end: 12px;
-border-radius:20px;
-background-color:blue;
-padding: 6px 12px;
-color: azure;
+ ul li{
+    margin-top: 15px;
+    list-style-type: none;
+   cursor: pointer;
+   margin-block-end: 12px;
+   border-radius:20px;
+   background-color:rgb(131, 131, 164);
+   padding: 6px 12px;
+   color: azure;
 }
 #task-list{
-
-height: 20;
+height: 20px;
 }
