@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -67,6 +68,8 @@ margin-left: 10px;
     border-radius: 50px;
 }
 
+
+
 #task-list {
     height: 100px;
     width: 100%;
@@ -95,6 +98,35 @@ ul{
    padding: 6px 12px;
    color: azure;
 }
+
 #task-list{
+   
+    height: 40px;
+    color: antiquewhite;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0 15px;
 height: 20px;
+}
+
+/* Ensure entire task box is properly styled */
+#task-container {
+    width: 100%;
+    max-width: 250px;
+    border: 2px solid black;  /* This is the only border */
+    border-radius: 10px; 
+    padding: 10px;
+    margin-top: 20px;
+    background-color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Remove border from individual tasks */
+#task-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
