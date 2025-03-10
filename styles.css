@@ -49,6 +49,8 @@ button{
     border: none;
     cursor: pointer;
 }
+
+
  #addTask{
 height: 50px;
 width: 80px;
@@ -110,11 +112,9 @@ ul{
 height: 20px;
 }
 
-/* Ensure entire task box is properly styled */
 #task-container {
     width: 100%;
     max-width: 250px;
-    border: 2px solid black;  /* This is the only border */
     border-radius: 10px; 
     padding: 10px;
     margin-top: 20px;
@@ -123,8 +123,6 @@ height: 20px;
     flex-direction: column;
     align-items: center;
 }
-
-/* Remove border from individual tasks */
 #task-list {
     width: 100%;
     padding: 0;
