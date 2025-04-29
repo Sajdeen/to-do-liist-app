@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }        
 
+body{
+    background: url("https://cdn.pixabay.com/photo/2020/07/28/11/43/circles-5444818_1280.png");
+}
 .container{
  margin: auto;
     margin-top: 50px;
@@ -34,14 +37,14 @@ h1{
     display: flex;
     align-items: center;
     overflow: hidden;
+    background-color: rgb(187, 178, 165);
+    margin-bottom:20px
 }
 
 
-#taskInput{
-    height: 20px;
 
    
-}
+
 button{
     background-color: darkgreen;
     height: 20px;
@@ -70,18 +73,6 @@ margin-left: 10px;
     border-radius: 50px;
 }
 
-
-
-#task-list {
-    height: 100px;
-    width: 100%;
-    max-width: 250px;
-    border: 2px solid black; 
-    border-radius: 10px; 
-    padding: 10px; 
-    margin-top: 20px; 
-    background-color: white; 
-}
 ul{
     width: 100%;
     max-width: 20rem;
@@ -115,6 +106,7 @@ height: 20px;
 #task-container {
     width: 100%;
     max-width: 250px;
+    max-height: 400px;
     border-radius: 10px; 
     padding: 10px;
     margin-top: 20px;
@@ -122,9 +114,96 @@ height: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 }
 #task-list {
+    max-height: 50rem;
     width: 100%;
     padding: 0;
     margin: 0;
+}
+ul li:hover {
+    background-color: #6b6bb2;
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+.input-container {
+    border: 2px solid black;
+    height: 50px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(187, 178, 165);
+    width: 100%; /* optional, can also set a max-width */
+}
+
+/* Make input take full space and match button height */
+#taskInput {
+    flex-grow: 1;
+    height: 100%;  /* Match container height */
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    font-size: 16px;
+    border-radius: 100px;
+    background: transparent;
+}
+
+/* Keep button height same as container */
+#addTask {
+    height: 100%;
+    width: 80px;
+    font-size: 16px;
+    color: antiquewhite;
+    border-radius: 0 100px 100px 0;
+    border: none;
+    background-color: darkgreen;
+    cursor: pointer;
+}
+ul li {
+    margin-top: 15px;
+    list-style-type: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(131, 131, 164);
+    padding: 6px 12px;
+    color: azure;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Completed tasks: strike-through and lighter */
+ul li.completed {
+    text-decoration: line-through;
+    background-color: gray;
+    opacity: 0.7;
+}
+
+/* Add a remove (X) button */
+ul li .remove-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#todoList {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+}
+#task-list {
+    max-height: 200px;  /* or auto */
+    overflow-y: auto;   /* allows scrolling if needed */
+    height: auto;
 }
