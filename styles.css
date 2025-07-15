@@ -6,7 +6,8 @@
 }        
 
 body{
-    background: url("https://cdn.pixabay.com/photo/2020/07/28/11/43/circles-5444818_1280.png");
+background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    background-size: cover;
 }
 .container{
  margin: auto;
@@ -29,6 +30,7 @@ h1{
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
+    user-select: none;
 }
 .input-container{
     border: 2px solid black;
@@ -37,14 +39,10 @@ h1{
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-color: rgb(187, 178, 165);
-    margin-bottom:20px
+  background:linear-gradient(90deg, #d97b9a 0%, #daae51 100%);
+    margin-bottom:10px
 }
-
-
-
    
-
 button{
     background-color: darkgreen;
     height: 20px;
@@ -58,19 +56,24 @@ button{
 height: 50px;
 width: 80px;
 font-size: 20px;
-color: antiquewhite;
+font-weight: bold ;
+color: rgb(182, 134, 72);
 border-radius: 10px;
 margin-left: 10px;
- }
+user-select: none; 
+}
 
 #taskInput {
-    flex-grow: 1;
-    height: 40px;
+    flex-grow: 1;                  /* Allow input to grow inside flex container */
+    height: 100%;                  /* Match parent height */
     border: none;
     outline: none;
-    padding-left: 10px;
+    padding-left: 40px;
     font-size: 16px;
-    border-radius: 50px;
+    border-radius: 100px;
+    background-color: rgb(210, 40, 111);
+    color: white;                  /* Better contrast than #000 on dark bg */
+border-radius: right;
 }
 
 ul{
@@ -79,6 +82,7 @@ ul{
     display: flex;
     align-items: center;
     flex-direction: column;
+
 }
 
  ul li{
@@ -94,20 +98,25 @@ ul{
 
 #task-container {
     align-items: center;
-    justify-content: baseline;
+    justify-content: center;
+    height: 200px;
     width: 100%;
     max-width: 250px;
-    height: 15vh;
+ background: linear-gradient(135deg, #cab366, #39adbc, 180DEG #6b6bb2);
+   height: 15vh;
     border-radius: 10px; 
     padding: 2px;
-    margin-top: 10px;
-    background-color: rgb(204, 126, 126); 
+    margin-top: 1px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    left: 41%;
-    position: fi;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: none;
+    user-select: none;
 }
+
 #todoList {
     width: 100%;
     max-height: 500px;
@@ -115,39 +124,17 @@ ul{
 }
 
 ul li:hover {
-    background-color: #6b6bb2;
+    background-color: #e2eaa3;
     transform: scale(1.03);
     transition: 0.3s ease;
 }
-.input-container {
-    border: 2px solid black;
-    height: 50px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background-color: rgb(187, 178, 165);
-    width: 100%; /* optional, can also set a max-width */
-}
 
-#taskInput {
-    flex-grow: 1;
-    height: 100%;  /* Match container height */
-    border: none;
-    outline: none;
-    padding-left: 15px;
-    font-size: 16px;
-    color: rgb(23, 9, 9);
-    border-radius: 100px;
-    background: transparent;
-}
 
-/* Keep button height same as container */
 #addTask {
     height: 100%;
     width: 80px;
     font-size: 16px;
-    color: antiquewhite;
+    color: rgb(240, 175, 91);
     border-radius: 0 100px 100px 0;
     border: none;
     background-color: darkgreen;
@@ -174,18 +161,3 @@ ul li.completed {
     opacity: 0.7;
 }
 
-/* Add a remove (X) button */
-ul li .remove-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: red;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    font-size: 14px;
-    cursor: pointer;
-}
