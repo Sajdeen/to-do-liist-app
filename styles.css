@@ -20,12 +20,12 @@ background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
    
 }
 h1{
-   background:url("n.webp");
+   background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s");
    background-size: cover;
    -webkit-background-clip: text;
   -webkit-text-fill-color:transparent;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
@@ -76,10 +76,6 @@ button{
     border: none;
     cursor: pointer;
 }
-
-
- 
-
 
 ul{
     width: 100%;
