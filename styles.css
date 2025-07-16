@@ -95,7 +95,7 @@ ul{
    border-radius:10px;
    background-color:#dd788c;
    padding: 6px 12px;
-   color: #dec5c5;
+   color: #150f0f;
      transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
@@ -128,7 +128,8 @@ ul{
 }
 
 ul li:hover {
-    background-color: #e2eaa3;
+    background-color: #d3db92;
+    font-weight: bold;
     transform: scale(1.03);
     transition: 0.3s ease;
 }
