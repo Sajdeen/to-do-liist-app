@@ -3,7 +3,16 @@ const addedTaskBtn = document.getElementById("addTask");
 const todoList = document.getElementById("todoList");
 const taskContainer = document.getElementById("task-container");    
 
+
+taskContainer.style.borderRadius = "20%";
 taskContainer.style.display = "none";
+function checkIfTaskListEmpty() {
+    if(todoList.children.length ===0) {
+        taskContainer.style.display = "none";
+    }
+}
+
+
 addedTaskBtn.addEventListener("click", function() {
     const task = inputBox.value.trim();
     if (!task) {
@@ -11,19 +20,19 @@ addedTaskBtn.addEventListener("click", function() {
         return;
     }
 
-taskContainer.style.display ="block";
+    taskContainer.style.display = "flex";
+
 const li = document.createElement("li");
 li.textContent = task;
  li.style.display = "flex";
 li.style.justifyContent = "space-between";
 li.style.alignItems = "center";
+li.style.animation = "slideIn 0.4s ease-out";
+
 
 const deleteBtn = document.createElement("button");
 deleteBtn.textContent ="X";
 deleteBtn.className = "delete-btn";
-
-
-
 deleteBtn.style.backgroundColor ="red";
 deleteBtn.style.color = "white";
 deleteBtn.style.border = "none";
@@ -35,9 +44,11 @@ deleteBtn.style.fontSize = "16px";
 deleteBtn.style.marginLeft = "10vh";
 deleteBtn.style.right = "10px";
 deleteBtn.style.top = "40%";     
+deleteBtn.style.transform = "translateY(-50%)";
 
 deleteBtn.addEventListener("click",function(){
     li.remove();
+    checkIfTaskListEmpty();
 });
 
 li.appendChild(deleteBtn);
